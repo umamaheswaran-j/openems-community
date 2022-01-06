@@ -1,0 +1,278 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import "variables";
+
+.active {
+    color: $primary-color;
+}
+.primary-color {
+    fill: $primary-color;
+}
+.primary-color-contrast {
+    fill: $primary-color-contrast;
+}
+.secondary-color {
+    fill: $secondary-color;
+}
+.secondary-color-contrast {
+    fill: $secondary-color-contrast;
+}
+html.ios {
+    --ion-default-font: -apple-system, BlinkMacSystemFont, $font-family, $font-size;
+}
+
+html.md {
+    --ion-default-font: $font-family;
+    --ion-default-font: $font-size;
+}
+
+//252px for the exact width of my-date-range-picker in PickDateComponent
+.pickdate-popover .popover-content {
+    width: 251px;
+    position: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.slides {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%;
+}
+
+ion-label {
+    font-family:"Roboto", "Helvetica Neue", sans-serif;
+    font-size: $font-size;
+}
+.sc-ion-label-md-h{
+    font-size: $font-size;
+}
+
+.sc-ion-label-md-h sc-ion-label-md-s md in-item-color hydrated{
+    font-size: $font-size;
+}
+ion-item.noPadding {
+    --ion-safe-area-right: 0.1;
+}
+ion-icon{
+    color: black;
+}
+ion-title{
+    font-size: $font-size;
+}
+ion-menu{
+    --background: var(--ion-color-short) !important; 
+       ion-content{            
+           --background: var(--ion-color-short) !important; 
+           ion-header{ 
+               --background-color: var(--ion-color-short) !important;
+               --color: #FFFFFF !important;   
+               --border:none;
+               --font-size: $font-size;
+           }
+           ion-list{
+           background-color: #07114a;
+           }
+           ion-item{
+               --background: var(--ion-color-short) !important;
+                --color: #FFFFFF !important;
+                ion-icon{ padding-right: 10px !important; }
+                --border-width: 0;
+                --inner-border-width: 0;
+                ion-item.hover{
+                    --border-color:var(--ion-color-primary) !important; 
+                    --background-color:var(--ion-color-primary) !important; 
+                }
+           }
+       }
+   }
+mat-card.single {
+    margin: 20px;
+}
+
+mat-card.single_leftright {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+mat-card.single_top {
+    margin-top: 20px;
+}
+
+table.full_width {
+    width: 100%;
+}
+
+.bold {
+    font-weight: 400;
+}
+
+td.align_right {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.underline {
+    border-bottom: 1pt solid lightgray;
+}
+
+.gray_color {
+    color: gray;
+}
+
+button.activated {
+    color: black;
+    background-color: lightgreen;
+}
+
+#toast-container {
+    font-family: $font-family;
+}
+
+// 360px is approximate min. width of mobile devices
+ion-toast.container {
+    text-align: center;
+    --min-width: 360px;
+}
+ion-label {
+    font-size: 14px;
+}
+
+
+.no-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/*
+* Applies to ngx-formly sections
+*/
+formly-input-section {
+    flex: auto; // use all remaining space in a row
+}
+
+// Added styles for alertController, because alertController doesnt take ionic default style
+.alertController{
+    .alert-head{
+        text-align: center !important;
+        .alert-sub-title{
+            font-size: large;
+            font-weight: bold;
+            color: $primary-color;
+        }
+    }
+            .alert-message{
+                text-align: center;
+            }
+    .alert-wrapper{
+        width: 25% !important;
+        .alert-button-group{
+            justify-content: center;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 35%;
+            .alert-button{
+                color: $primary-color;
+                font-size: small;
+            }
+        }
+    }
+}
+
+:root {
+
+    /*
+     * Used in HeatingElement, because ion-picker is not accessible via ion-datetime tag
+     */
+    ion-picker {
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // CSS class is here because ion-label is inside ion-item tag, CSS within ion-item doesn't work with global.scss
+    // this class is used to get the same style like in a html table
+    ion-label.regularFont {
+        font-family: $font-family;
+        font-size: $font-size;
+        color:black;
+    }
+
+    // use in HeatingElementWidget Line:80
+    // CSS class is here because ion-picker is not accessible via ion-datetime tag
+    ion-picker {
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+ion-card-content{
+    background-color: #FFFFFF;
+}
+
+    // CSS class is here because ion-label is inside ion-item tag, CSS within ion-item doesn't work with global.scss
+    // this class is used to get the same style like in a html table
+    ion-label.regularFont {
+        font-family: $font-family;
+        font-size: $font-size;
+    }
+
+    // CSS class is used to get the same style like in a html table
+    ion-select {
+        font-family: $font-family;
+        font-size: $font-size;
+    }
+
+    .alert-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    ion-input.regularFont {
+        font-family: $font-family;
+        font-size: $font-size;
+    }
+    ion-title{
+        color: black;
+        font-size: $font-size;
+    }
+
+    ion-item{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    }
+    ion-toggle{
+        --background-checked: var(--ion-color-primary-tint);
+    }
+}

@@ -1,0 +1,8 @@
+= KMtronic Modbus Relay Board
+
+This bundle implements the Kmtronic Modbus Relay board. Relay outputs can be used to turn ON/OFF lights, motors and signal alarms. Implementations are for 4 and 8 relais.
+
+Implemented Natures::
+- DigitalOutput
+
+https://github.com/OpenEMS/openems/tree/develop/io.openems.edge.io.kmtronic[Source Code icon:github[]]

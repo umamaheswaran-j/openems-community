@@ -1,0 +1,15 @@
+Bundle-Name: fastexcel
+Bundle-DocURL: https://github.com/dhatim/fastexcel
+Bundle-License: https://opensource.org/licenses/Apache-2.0
+Bundle-Version: 0.12.12
+
+Include-Resource: @fastexcel-0.12.12.jar
+
+-dsannotations: *
+
+-metatypeannotations: *
+
+Export-Package: \
+    org.dhatim.fastexcel
+
+-sources: false
