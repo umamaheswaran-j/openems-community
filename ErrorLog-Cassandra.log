@@ -1,0 +1,76 @@
+Following is the error log when the generated openems_edge.jar is run:
+======================================================================
+org.ops4j.pax.logging.pax-logging-log4j1 [org.ops4j.pax.logging.spi.support.EventAdminConfigurationNotifier] INFO : Logging configuration changed. (Event Admin service unavailable - no notification sent).
+ERROR: Bundle io.openems.edge.application [9] Error starting jar/io.openems.edge.application.jar (org.osgi.framework.BundleException: Unable to resolve io.openems.edge.application [9](R 9.0): missing requirement [io.openems.edge.application [9](R 9.0)] osgi.wiring.package; (&(osgi.wiring.package=com.datastax.oss.driver.api.core.cql)(version>=4.13.0)(!(version>=5.0.0))) [caused by: Unable to resolve com.datastax.oss.driver.core [126](R 126.0): missing requirement [com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0)))] Unresolved requirements: [[io.openems.edge.application [9](R 9.0)] osgi.wiring.package; (&(osgi.wiring.package=com.datastax.oss.driver.api.core.cql)(version>=4.13.0)(!(version>=5.0.0)))])
+org.osgi.framework.BundleException: Unable to resolve io.openems.edge.application [9](R 9.0): missing requirement [io.openems.edge.application [9](R 9.0)] osgi.wiring.package; (&(osgi.wiring.package=com.datastax.oss.driver.api.core.cql)(version>=4.13.0)(!(version>=5.0.0))) [caused by: Unable to resolve com.datastax.oss.driver.core [126](R 126.0): missing requirement [com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0)))] Unresolved requirements: [[io.openems.edge.application [9](R 9.0)] osgi.wiring.package; (&(osgi.wiring.package=com.datastax.oss.driver.api.core.cql)(version>=4.13.0)(!(version>=5.0.0)))]
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:4398)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2308)
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+org.ops4j.pax.logging.pax-logging-log4j1 [org.ops4j.pax.logging.spi.support.EventAdminConfigurationNotifier] INFO : Sending Event Admin notification (configuration successful) to org/ops4j/pax/logging/Configuration
+org.apache.felix.http.jetty [org.eclipse.jetty.util.log] INFO : Logging initialized @2025ms to org.eclipse.jetty.util.log.Slf4jLog
+org.apache.felix.http.jetty [org.eclipse.jetty.server.Server] INFO : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.13+8-Ubuntu-0ubuntu1.21.10
+org.apache.felix.http.jetty [org.eclipse.jetty.server.session] INFO : DefaultSessionIdManager workerName=node0
+org.apache.felix.http.jetty [org.eclipse.jetty.server.session] INFO : No SessionScavenger set, using defaults
+org.apache.felix.http.jetty [org.eclipse.jetty.server.session] INFO : node0 Scavenging every 600000ms
+org.apache.felix.http.jetty [org.eclipse.jetty.server.handler.ContextHandler] INFO : Started o.e.j.s.ServletContextHandler@79cc70a9{/,null,AVAILABLE}
+org.apache.felix.http.jetty [org.eclipse.jetty.server.Server] INFO : Started @2129ms
+org.apache.felix.http.jetty [org.eclipse.jetty.server.session] INFO : node0 Scavenging every 600000ms
+org.apache.felix.http.jetty [org.eclipse.jetty.server.AbstractConnector] INFO : Started ServerConnector@12d2ff3e{HTTP/1.1, (http/1.1)}{0.0.0.0:9080}
+2022-01-06 10:49:54,780 [artLevel] INFO  [org.apache.felix.http.jetty   ] Started Jetty 9.4.43.v20210629 at port(s) HTTP:9080 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=2]
+2022-01-06 10:49:54,917 [artLevel] INFO  [pax.logging.internal.Activator] Enabling Java Util Logging API support.
+2022-01-06 10:49:54,918 [artLevel] INFO  [pax.logging.internal.Activator] Enabling SLF4J API support.
+2022-01-06 10:49:54,919 [artLevel] INFO  [pax.logging.internal.Activator] Enabling Apache Commons Logging API support.
+2022-01-06 10:49:54,920 [artLevel] INFO  [pax.logging.internal.Activator] Enabling JULI Logger API support.
+2022-01-06 10:49:54,921 [artLevel] INFO  [pax.logging.internal.Activator] Enabling Avalon Logger API support.
+2022-01-06 10:49:54,925 [artLevel] INFO  [pax.logging.internal.Activator] Enabling JBoss Logging API support.
+2022-01-06 10:49:54,927 [artLevel] INFO  [pax.logging.internal.Activator] Enabling Log4J v1 API support.
+2022-01-06 10:49:54,952 [artLevel] INFO  [pax.logging.internal.Activator] Enabling Log4J v2 API support.
+2022-01-06 10:49:55,149 [artLevel] INFO  [onent.AbstractOpenemsComponent] [ctrlDebugLog0] Activate Controller.Debug.Log
+ERROR: Bundle com.datastax.oss.driver.core [126] Error starting jar/java-driver-core-4.13.0.jar (org.osgi.framework.BundleException: Unable to resolve com.datastax.oss.driver.core [126](R 126.0): missing requirement [com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0))) Unresolved requirements: [[com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0)))])
+org.osgi.framework.BundleException: Unable to resolve com.datastax.oss.driver.core [126](R 126.0): missing requirement [com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0))) Unresolved requirements: [[com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0)))]
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:4398)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2308)
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-01-06 10:49:55,195 [tchQueue] ERROR [Events.Framework              ] FrameworkEvent ERROR
+org.osgi.framework.BundleException: Unable to resolve com.datastax.oss.driver.core [126](R 126.0): missing requirement [com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0))) Unresolved requirements: [[com.datastax.oss.driver.core [126](R 126.0)] osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.12.0)(!(version>=3.0.0)))]
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:4398)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2308)
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-01-06 10:49:55,302 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_componentManager] Activate Core.ComponentManager
+2022-01-06 10:49:55,334 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_host] Activate Core.Host
+2022-01-06 10:49:55,345 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_meta] Activate Core.Meta
+2022-01-06 10:49:55,353 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_predictorManager] Activate Core.PredictorManager
+2022-01-06 10:49:55,370 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_sum] Activate Core.Sum
+2022-01-06 10:49:55,380 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_cycle] Activate Core.Cycle
+2022-01-06 10:49:55,413 [artLevel] INFO  [onent.AbstractOpenemsComponent] [ctrlApiWebsocket0] Activate Controller.Api.Websocket
+2022-01-06 10:49:55,425 [artLevel] INFO  [socket.AbstractWebsocketServer] Starting [Websocket Api] websocket server [port=8085]
+2022-01-06 10:49:55,468 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_power] Activate Ess.Power
+2022-01-06 10:49:55,477 [artLevel] INFO  [onent.AbstractOpenemsComponent] [ctrlBalancing0] Activate Controller.Symmetric.Balancing
+2022-01-06 10:49:55,493 [artLevel] INFO  [onent.AbstractOpenemsComponent] [_evcsSlowPowerIncreaseFilter] Activate Evcs.SlowPowerIncreaseFilter
+2022-01-06 10:49:55,541 [artLevel] INFO  [onent.AbstractOpenemsComponent] [scheduler0] Activate Scheduler.AllAlphabetically
+2022-01-06 10:49:55,591 [artLevel] INFO  [onent.AbstractOpenemsComponent] [datasource0] Activate Simulator.Datasource.CSV.Predefined
+2022-01-06 10:49:55,610 [artLevel] INFO  [onent.AbstractOpenemsComponent] [ess0] Activate Simulator.EssSymmetric.Reacting
+2022-01-06 10:49:55,631 [artLevel] INFO  [onent.AbstractOpenemsComponent] [meter0] Activate Simulator.GridMeter.Acting
+2022-01-06 10:49:55,648 [artLevel] INFO  [onent.AbstractOpenemsComponent] [influx0] Activate Timedata.InfluxDB
+ERROR: Bundle io.openems.wrapper.cassandra-java [181] Error starting jar/io.openems.wrapper.cassandra-java-4.13.0.jar (org.osgi.framework.BundleException: Unable to resolve io.openems.wrapper.cassandra-java [181](R 181.0): missing requirement [io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry) Unresolved requirements: [[io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry)])
+org.osgi.framework.BundleException: Unable to resolve io.openems.wrapper.cassandra-java [181](R 181.0): missing requirement [io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry) Unresolved requirements: [[io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry)]
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:4398)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2308)
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-01-06 10:49:55,664 [tchQueue] ERROR [Events.Framework              ] FrameworkEvent ERROR
+org.osgi.framework.BundleException: Unable to resolve io.openems.wrapper.cassandra-java [181](R 181.0): missing requirement [io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry) Unresolved requirements: [[io.openems.wrapper.cassandra-java [181](R 181.0)] osgi.wiring.package; (osgi.wiring.package=com.esri.core.geometry)]
+	at org.apache.felix.framework.Felix.resolveBundleRevision(Felix.java:4398)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2308)
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1566)
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-01-06 10:49:56,431 [re.Cycle] WARN  [ms.edge.core.cycle.CycleWorker] [_cycle] Error in Controller [ctrlBalancing0]: Value for Channel [ess0/ActivePower] is invalid.
+^C2022-01-06 10:49:56,447 [re.Cycle] INFO  [ntroller.debuglog.DebugLogImpl] [ctrlDebugLog0] _sum[State:Ok Ess SoC:50 % Grid:863 W Consumption:863 W] ess0[SoC:50 %|L:UNDEFINED] meter0[863 W]
