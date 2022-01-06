@@ -1,0 +1,28 @@
+Bundle-Name: cassandra-java
+Bundle-Description: Java client for Cassandra
+Bundle-DocURL: https://github.com/datastax/java-driver
+Bundle-License: https://opensource.org/licenses/MIT
+Bundle-Version: 4.13.0
+
+Include-Resource: \
+	@java-driver-core-4.13.0.jar,\
+	@java-driver-query-builder-4.13.0.jar,\
+	@java-driver-mapper-runtime-4.13.0.jar,\
+
+Export-Package: \
+   com.datastax.dse.*,\
+   com.datastax.oss.*,\
+   ch.qos.logback,\
+   com.github.spotbugs,\
+   org.xerial.snappy,\
+   org.lz4,\
+   org.reactivestreams,\
+   org.apache.tinkerpop,\
+
+Import-Package: *
+
+-dsannotations: *
+
+-metatypeannotations: *
+
+-sources: false
