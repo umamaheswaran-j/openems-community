@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.gson.JsonElement;
-		
+
 import io.openems.common.exceptions.OpenemsError.OpenemsNamedException;
 import io.openems.common.exceptions.OpenemsException;
 import io.openems.common.types.ChannelAddress;
@@ -55,7 +55,7 @@ public class InfluxTimedataImpl extends AbstractOpenemsComponent
 	@Reference
 	private Cycle cycle;
 
-	private InfluxConnector influxConnector = null;	
+	private InfluxConnector influxConnector = null;
 
 	// Counts the number of Cycles till data is written to InfluxDB.
 	private int cycleCount = 0;

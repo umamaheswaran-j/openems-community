@@ -85,15 +85,15 @@ export const TRANSLATION = {
         },
     },
     Menu: {
-        aboutUI: 'Sobre EMS',
+        aboutUI: 'Sobre OpenEMS',
         accessLevel: 'Nivel de acceso',
-        edgeSettings: 'Configuración EMS',
+        edgeSettings: 'Configuración OpenEMS',
         generalSettings: 'Configuración general',
         index: 'Visión general',
         logout: 'Desuscribirse',
         menu: 'Menú',
         name: 'Nombre',
-        overview: 'estudio EMS',
+        overview: 'estudio OpenEMS',
         settings: 'Ajustes',
         user: 'Usuario',
     },
@@ -103,7 +103,7 @@ export const TRANSLATION = {
         connectionFailed: 'Conexión a {{value}} seperados.', // value = name of websocket
         connectionSuccessful: 'Conexión a {{value}} hecho.', // value = name of websocket
         deviceOffline: 'El aparato no está conectado!',
-        isOffline: 'EMS está fuera de línea!',
+        isOffline: 'OpenEMS está fuera de línea!',
         loggedInAs: 'Conectado como:',
         toEnergymonitor: 'Al monitor de energía...',
         type: 'Tipo:'
@@ -440,12 +440,12 @@ export const TRANSLATION = {
         build: "Esta compilación",
         contact: "Para preguntas y sugerencias sobre el sistema, por favor contacte a nuestro FEMS-Team en <a href=\"mailto:{{value}}\">{{value}}</a>.",
         currentDevelopments: "Desarrollos actuales",
-        developed: "Esta interfaz de usario es desarrollada por EMS como software de código abierto.",
+        developed: "Esta interfaz de usario es desarrollada por OpenEMS como software de código abierto.",
         faq: "Preguntas frecuentes (FAQ)",
         language: "Seleccionar idioma:",
-        openEMS: "Acerca de EMS",
+        openEMS: "Acerca de OpenEMS",
         patchnotes: "Cambios en la supervisión de esta compilación",
-        ui: "Interfaz de usario para EMS",
+        ui: "Interfaz de usario para OpenEMS",
     },
     Notifications: {
         authenticationFailed: 'Sin conexión: error de autenticación.',

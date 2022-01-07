@@ -1,6 +1,6 @@
 <ng-container *ngIf="edge">
     <ion-header>
-        <ion-toolbar color="light">
+        <ion-toolbar color="primary">
             <ion-title translate>General.grid</ion-title>
             <ion-buttons slot="start">
                 <chartOptions (setShowPhases)='onNotifyPhases($event)' [showPhases]="showPhases"></chartOptions>
@@ -17,7 +17,7 @@
             </ion-buttons>
         </ion-toolbar>
     </ion-header>
-    <ion-content color="medium">
+    <ion-content>
         <ion-card-content class="underline">
             <table class="full_width">
                 <tr>

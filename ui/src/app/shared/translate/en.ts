@@ -90,9 +90,9 @@ export const TRANSLATION = {
         },
     },
     Menu: {
-        aboutUI: 'About EMS',
+        aboutUI: 'About OpenEMS',
         accessLevel: 'Access Level',
-        edgeSettings: 'EMS Settings',
+        edgeSettings: 'OpenEMS Settings',
         generalSettings: 'General Settings',
         index: 'Index',
         logout: 'Sign Out',
@@ -108,7 +108,7 @@ export const TRANSLATION = {
         connectionFailed: 'Connection to {{value}} failed.', // value = name of websocket
         connectionSuccessful: 'Successfully connected to {{value}}.', // value = name of websocket
         deviceOffline: 'The device is not connected!',
-        isOffline: 'EMS is offline!',
+        isOffline: 'OpenEMS is offline!',
         loggedInAs: 'Logged in as:',
         toEnergymonitor: 'To Energymonitor...',
         type: 'Type:'
@@ -474,9 +474,9 @@ export const TRANSLATION = {
         developed: "This user interface is developed as open-source software.",
         faq: "Frequently asked questions (FAQ)",
         language: "Select language:",
-        openEMS: "More about EMS",
+        openEMS: "More about OpenEMS",
         patchnotes: "Changes in the monitoring for this build",
-        ui: "User interface for EMS",
+        ui: "User interface for OpenEMS",
     },
     Notifications: {
         authenticationFailed: 'No Connection: Authentication failed.',

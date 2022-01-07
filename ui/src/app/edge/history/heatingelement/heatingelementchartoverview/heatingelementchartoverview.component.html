@@ -1,6 +1,6 @@
 <ng-container *ngIf="edge">
     <ion-header>
-        <ion-toolbar color="light">
+        <ion-toolbar color="primary">
             <ion-title>{{ component.alias }}</ion-title>
             <ion-buttons slot="end">
                 <ion-button routerLink="/device/{{edge.id}}/history/">
@@ -14,7 +14,7 @@
             </ion-buttons>
         </ion-toolbar>
     </ion-header>
-    <ion-content color="medium">
+    <ion-content>
         <ion-card-content>
             <heatingelementChart [component]="component" [period]="service.historyPeriod">
             </heatingelementChart>

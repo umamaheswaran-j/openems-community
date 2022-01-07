@@ -37,23 +37,23 @@
     <!-- Side Menu  -->
     <ion-menu type="overlay" side="start" contentId="content">
       <ion-header>
-        <ion-toolbar color="short">
+        <ion-toolbar color="primary">
           <ion-buttons slot="start">
-            <ion-menu-button style="color:white;" autoHide="false"></ion-menu-button>
+            <ion-menu-button autoHide="false"></ion-menu-button>
           </ion-buttons>
-          <ion-title style="color:white;" translate>Menu.menu</ion-title>
+          <ion-title translate>Menu.menu</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-list style="background-color: #07114a;">
+        <ion-list>
 
           <ion-item *ngIf="(service.metadata | async)?.user as user" routerLinkActive="active" routerLink="/user"
             (click)="menu.close()">
-            <ion-icon style="margin-right: 5%" size="large" style="color:white;" slot="start" name="person-outline">
+            <ion-icon style="margin-right: 5%" size="large" color="primary" slot="start" name="person-outline">
             </ion-icon>
-            <ion-label class="ion-text-wrap" style="color:white;">
+            <ion-label class="ion-text-wrap" color="dark">
               <p>{{ user.name }}</p>
-              <ion-text style="color:white;">
+              <ion-text color="medium">
                 <p>{{ user.id }}</p>
               </ion-text>
             </ion-label>
@@ -65,7 +65,7 @@
               *ngIf="environment.backend == 'OpenEMS Backend'
               && ((service.edges | keys).length > 1 || (service.user.globalRole == 'installer' || service.user.globalRole == 'admin'))">
               <ion-item lines="full" routerLinkActive="active" routerLink="/index" (click)="menu.close()">
-                <ion-label color="dark" translate>Menu.overview </ion-label>
+                <ion-label translate>Menu.overview </ion-label>
               </ion-item>
             </ng-container>
           </ng-container>

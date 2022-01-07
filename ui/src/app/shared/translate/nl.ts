@@ -84,15 +84,15 @@ export const TRANSLATION = {
         },
     },
     Menu: {
-        aboutUI: 'Over EMS',
+        aboutUI: 'Over OpenEMS',
         accessLevel: 'Toegangsniveau',
-        edgeSettings: 'EMS instellingen',
+        edgeSettings: 'OpenEMS instellingen',
         generalSettings: 'Algemene instellingen',
         index: 'Overzicht',
         logout: 'Uitloggen',
         menu: 'Menu',
         name: 'Naam',
-        overview: 'EMS overzicht',
+        overview: 'OpenEMS overzicht',
         settings: 'Instellingen',
         user: 'Gebruiker',
     },
@@ -102,7 +102,7 @@ export const TRANSLATION = {
         connectionFailed: 'Verbinding met {{ value } } mislukt.', // (value = Name vom Websocket)
         connectionSuccessful: 'Succesvol verbonden met {{value }}.', // (value = Name vom Websocket)
         deviceOffline: 'Het apparaat is niet aangesloten!',
-        isOffline: 'EMS is offline!',
+        isOffline: 'OpenEMS is offline!',
         loggedInAs: 'Geregistreerd als:',
         toEnergymonitor: 'Naar Energiemonitor...',
         type: 'Type:'
@@ -442,10 +442,10 @@ export const TRANSLATION = {
         developed: "Deze gebruikersinterface is ontwikkeld als open-source-software.",
         faq: "Veel Gestelde Vragen (FAQ)",
         language: "Selecteer taal: ",
-        openEMS: "Meer over EMS",
+        openEMS: "Meer over OpenEMS",
         patchnotes: "Veranderingen in de monitoring voor deze build",
         sourcecode: "Broncode",
-        ui: "Gebruikersinterface voor EMS",
+        ui: "Gebruikersinterface voor OpenEMS",
     },
     Notifications: {
         authenticationFailed: 'Geen verbinding.Autorisatie mislukt.',

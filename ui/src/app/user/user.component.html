@@ -1,11 +1,11 @@
 <header></header>
-<ion-content color="medium">
+<ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-md="8" size-xl="4">
         <ion-card *ngIf="(service.metadata | async)?.user as user">
           <ion-item lines="full" color="light">
-            <ion-icon slot="start" size="large" color="dark" name="person-outline"></ion-icon>
+            <ion-icon slot="start" size="large" color="primary" name="person-outline"></ion-icon>
             <ion-label class="ion-text-wrap" translate>
               Menu.user
             </ion-label>
@@ -62,7 +62,7 @@
       <ion-col size="12" size-md="8" size-xl="4">
         <ion-card>
           <ion-item lines="full" color="light">
-            <ion-icon slot="start" size="large" color="dark" name="options-outline"></ion-icon>
+            <ion-icon slot="start" size="large" color="primary" name="options-outline"></ion-icon>
             <ion-label translate>Menu.generalSettings</ion-label>
           </ion-item>
           <ion-card-content>
@@ -82,7 +82,7 @@
       <ion-col size="12" size-md="8" size-xl="4">
         <ion-card>
           <ion-item lines="full" color="light">
-            <ion-icon slot="start" size="large" color="dark" name="code-slash-outline"></ion-icon>
+            <ion-icon slot="start" size="large" color="primary" name="code-slash-outline"></ion-icon>
             <ion-label class="ion-text-wrap">
               {{ environment.edgeShortName }} - {{ environment.edgeLongName }}
             </ion-label>

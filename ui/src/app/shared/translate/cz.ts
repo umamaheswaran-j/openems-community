@@ -89,15 +89,15 @@ export const TRANSLATION = {
         },
     },
     Menu: {
-        aboutUI: 'About EMS UI',
+        aboutUI: 'About OpenEMS UI',
         accessLevel: 'Úroveň přístupu',
-        edgeSettings: 'EMS Předvolby',
+        edgeSettings: 'OpenEMS Předvolby',
         generalSettings: 'Obecné Nastavení',
         index: 'Přehled',
         logout: 'Odhlásit',
         menu: 'Menu',
         name: 'Název',
-        overview: 'EMS Přehled',
+        overview: 'OpenEMS Přehled',
         settings: 'nastavení',
         user: 'Uživatel',
     },
@@ -107,7 +107,7 @@ export const TRANSLATION = {
         connectionFailed: 'Připojení k {{value}} selhalo.', // value = name of websocket
         connectionSuccessful: 'Úspěšně připojeno k {{value}}.', // value = name of websocket
         deviceOffline: 'Zařízení není připojeno!',
-        isOffline: 'EMS je ve stavu offline!',
+        isOffline: 'OpenEMS je ve stavu offline!',
         loggedInAs: 'Registrováno jako:',
         toEnergymonitor: 'Do Monitoringu energetických toků…',
         type: 'Typ:'
@@ -459,9 +459,9 @@ export const TRANSLATION = {
         developed: "Toto uživatelské rozhraní bylo vyvinuto jako open-source software.",
         faq: "Často kladené otázky (FAQ)",
         language: "Zvolte jazyk:",
-        openEMS: "Více o EMS",
+        openEMS: "Více o OpenEMS",
         patchnotes: "Změny v monitorování tohoto sestavení",
-        ui: "Uživatelské rozhraní pro EMS",
+        ui: "Uživatelské rozhraní pro OpenEMS",
     },
     Notifications: {
         authenticationFailed: 'Žádné připojení: Ověření uživatele selhalo.',

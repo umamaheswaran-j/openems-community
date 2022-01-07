@@ -1,6 +1,6 @@
 <ng-container *ngIf="edge">
     <ion-header>
-        <ion-toolbar color="light">
+        <ion-toolbar color="primary">
             <ion-title translate>General.consumption</ion-title>
             <ion-buttons slot="start">
                 <chartOptions (setShowTotal)='onNotifyTotal($event)' (setShowPhases)='onNotifyPhases($event)'
@@ -18,7 +18,7 @@
             </ion-buttons>
         </ion-toolbar>
     </ion-header>
-    <ion-content color="medium">
+    <ion-content>
         <ng-container *ngIf="showTotal">
             <ion-card-content>
                 <table class="full_width">

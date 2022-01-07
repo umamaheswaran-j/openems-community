@@ -1,0 +1,59 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      touch /tmp/.gradle-lock
+      ./gradlew build buildBackend -x test
+      rm /tmp/.gradle-lock
+    command: java 
+      -Dfelix.cm.dir=$(pwd)/tools/docker/openems-backend/config.d
+      -jar build/openems-backend.jar
+  - init: |
+      sleep 10 && while [ -f /tmp/.gradle-lock ]; do sleep 1; done
+      ./gradlew build buildEdge -x test
+    command: java 
+      -Dfelix.cm.dir=$(pwd)/tools/docker/openems-edge/config.d
+      -Dopenems.data.dir=$(pwd)/tools/docker/openems-edge/data
+      -jar build/openems-edge.jar
+  - init: cd ui && npm install
+    command: ng serve 
+      -c openems-gitpod
+      --host 0.0.0.0
+      --disable-host-check
+  - init: |
+      mkdir /workspace/odoo && cd /workspace/odoo
+      git clone --depth=1 -b feature/gitpod https://github.com/OpenEMS/odoo-openems.git openems
+      git clone --depth=1 -b 12.0 https://github.com/OCA/partner-contact
+      git clone --depth=1 -b 12.0 https://github.com/OCA/web.git
+      ln -s ./partner-contact/partner_firstname ./partner_firstname
+      ln -s ./web/web_m2x_options ./web_m2x_options
+    command: odoo -d v12 --addons-path=/workspace/odoo -i base,partner_firstname,web_m2x_options,stock,openems
+
+ports:
+  # Backend
+  - port: 8075 # Backend-to-Backend JSON/REST Api
+    onOpen: ignore
+  - port: 8076 # Backend-to-Backend JSON/Websocket Api
+    onOpen: ignore
+  - port: 8079 # Apache Felix Web Console
+    onOpen: ignore
+  - port: 8081 # Edge-Websocket
+    onOpen: ignore
+  - port: 8082 # UI-Websocket
+    onOpen: ignore
+  # Edge
+  - port: 8080 # Apache Felix Web Console
+    onOpen: ignore
+  - port: 8084 # JSON/REST Api
+    onOpen: ignore
+  - port: 8085 # JSON/Websocket Api
+    onOpen: ignore
+  # UI
+  - port: 4200
+    onOpen: open-browser
+  # Odoo
+  - port: 8069
+    onOpen: open-browser
+  - port: 5432
+    onOpen: ignore

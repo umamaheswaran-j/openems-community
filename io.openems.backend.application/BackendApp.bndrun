@@ -54,6 +54,7 @@
 	io.openems.backend.core;version=snapshot,\
 	io.openems.backend.edgewebsocket;version=snapshot,\
 	io.openems.backend.metadata.dummy;version=snapshot,\
+	io.openems.backend.metadata.file;version=snapshot,\
 	io.openems.backend.metadata.odoo;version=snapshot,\
 	io.openems.backend.timedata.dummy;version=snapshot,\
 	io.openems.backend.timedata.influx;version=snapshot,\
@@ -81,5 +82,4 @@
 	org.osgi.service.jdbc;version='[1.0.1,1.0.2)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
 	org.osgi.util.promise;version='[1.2.0,1.2.1)',\
-	org.postgresql.jdbc;version='[42.3.1,42.3.2)',\
-	io.openems.backend.metadata.file;version='[1.0.0,1.0.1)'
+	org.postgresql.jdbc;version='[42.3.1,42.3.2)'

@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-toolbar style="background-color: white;" mode="md">
+  <ion-toolbar color="primary" mode="md">
     <ion-buttons *ngIf="backUrl" slot="start">
       <ion-button [routerLink]="backUrl">
-        <ion-icon color="dark" name="arrow-back-outline"></ion-icon>
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="start" *ngIf="enableSideMenu">
@@ -62,7 +62,7 @@
   </ion-toolbar>
 
   <ng-container *ngIf="currentPage == 'IndexHistory'">
-    <ion-toolbar color="primary">
+    <ion-toolbar color="secondary">
       <ion-buttons class="ion-justify-content-center">
         <pickdate></pickdate>
       </ion-buttons>

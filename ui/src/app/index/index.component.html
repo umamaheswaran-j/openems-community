@@ -1,5 +1,5 @@
 <header></header>
-<ion-content color="medium">
+<ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-md="6" size-lg="4">
@@ -12,7 +12,7 @@
 
           <!-- Login is required. Waiting for credentials input -->
           <ion-card *ngSwitchCase="'waiting for credentials'">
-            <ion-item color="light" lines="full">
+            <ion-item color="primary" lines="full">
               <ion-icon slot="start" name="person-outline"></ion-icon>
               <ion-label translate>Login.title</ion-label>
             </ion-item>
@@ -84,7 +84,7 @@
                   <ng-container *ngIf="(service.metadata | async)?.user as user">
                     <ng-container *ngIf="(user.globalRole == 'installer' || user.globalRole == 'admin'), else others">
                       <!-- No access to Edges -->
-                      <ion-item color="bl" lines="full">
+                      <ion-item color="warning" lines="full">
                         <ion-icon slot="start" name="alert-circle-outline"></ion-icon>
                         <ion-label class="ion-text-wrap ion-text-center">Sie haben noch kein
                           {{environment.edgeShortName}} hinzugefügt.</ion-label>

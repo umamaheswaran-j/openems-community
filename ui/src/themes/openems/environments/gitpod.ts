@@ -3,9 +3,9 @@ import { Environment } from "src/environments";
 export const environment: Environment = {
     theme: "OpenEMS",
 
-    uiTitle: "EMS UI",
-    edgeShortName: "EMS",
-    edgeLongName: "Energy Management System",
+    uiTitle: "OpenEMS UI",
+    edgeShortName: "OpenEMS",
+    edgeLongName: "Open Energy Management System",
 
     backend: 'OpenEMS Backend',
     // gitpod puts the port number in front of the hostname

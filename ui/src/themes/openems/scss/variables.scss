@@ -7,7 +7,6 @@ $primary-color-contrast: var(--ion-color-primary-contrast);
 $secondary-color: var(--ion-color-dark);
 $secondary-color-contrast: var(--ion-color-secondary-contrast);
 $font-family: var(--ion-font-family);
-$font-size: var(--ion-font-size);
 
 :root {
   /** primary **/
@@ -16,7 +15,7 @@ $font-size: var(--ion-font-size);
   --ion-color-primary-contrast: #fff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #287e96;
-  --ion-color-primary-tint: #292929;
+  --ion-color-primary-tint: #429ab3;
 
   /** secondary **/
   --ion-color-secondary: #76b8cb;
@@ -43,7 +42,7 @@ $font-size: var(--ion-font-size);
   --ion-color-success-tint: #28e070;
 
   /** warning **/
-  --ion-color-warning:#ffce00;
+  --ion-color-warning: #ffce00;
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #000;
   --ion-color-warning-contrast-rgb: 0, 0, 0;
@@ -58,16 +57,16 @@ $font-size: var(--ion-font-size);
   --ion-color-danger-shade: #d83636;
   --ion-color-danger-tint: #f65050;
 
- /** light **/
- --ion-color-light:  #F0F3F5;//#f4f4f4;
- --ion-color-light-rgb: 244, 244, 244;
- --ion-color-light-contrast: #000;
- --ion-color-light-contrast-rgb: 0, 0, 0;
- --ion-color-light-shade: #d7d7d7;
- --ion-color-light-tint: #f5f5f5;
+  /** light **/
+  --ion-color-light: #f4f4f4;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d7d7;
+  --ion-color-light-tint: #f5f5f5;
 
   /** medium **/
-  --ion-color-medium: #e5e5e6;
+  --ion-color-medium: #989aa2;
   --ion-color-medium-rgb: 152, 154, 162;
   --ion-color-medium-contrast: #000;
   --ion-color-medium-contrast-rgb: 0, 0, 0;
@@ -75,27 +74,13 @@ $font-size: var(--ion-font-size);
   --ion-color-medium-tint: #a2a4ab;
 
   /** dark **/
-  --ion-color-dark: #000;
+  --ion-color-dark: #222;
   --ion-color-dark-rgb: 34, 34, 34;
   --ion-color-dark-contrast: #fff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e1e1e;
   --ion-color-dark-tint: #383838;
 
-
-  
-/** Menu Color**/
---ion-color-short: #07114a;
---ion-color-short-rgb: 152, 154, 162;
---ion-color-short-contrast: #000;
---ion-color-short-contrast-rgb: 0, 0, 0;
---ion-color-short-shade:$primary-color;
---ion-color-short-tint:$primary-color;
-
-
-
   /** font **/
   --ion-font-family: "Roboto", "Helvetica Neue", sans-serif;
-  --ion-font-size: 14px;
-  
 }

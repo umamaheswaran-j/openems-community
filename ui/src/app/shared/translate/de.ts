@@ -92,7 +92,7 @@ export const TRANSLATION = {
         },
     },
     Menu: {
-        aboutUI: 'Über EMS',
+        aboutUI: 'Über OpenEMS',
         accessLevel: 'Zugriffslevel',
         edgeSettings: 'Einstellungen',
         generalSettings: 'Allgemeine Einstellungen',
@@ -110,7 +110,7 @@ export const TRANSLATION = {
         connectionFailed: 'Verbindung zu {{value}} getrennt.', // value = name of websocket
         connectionSuccessful: 'Verbindung zu {{value}} hergestellt.', // value = name of websocket
         deviceOffline: 'Das Gerät ist nicht verbunden!',
-        isOffline: 'EMS ist offline!',
+        isOffline: 'OpenEMS ist offline!',
         loggedInAs: 'Angemeldet als:',
         toEnergymonitor: 'Zum Energiemonitor...',
         type: 'Typ:'
@@ -474,9 +474,9 @@ export const TRANSLATION = {
         developed: "Diese Benutzeroberfläche wird als Open-Source-Software entwickelt.",
         faq: "Häufig gestellte Fragen (FAQ)",
         language: "Sprache wählen:",
-        openEMS: "Mehr zu EMS",
+        openEMS: "Mehr zu OpenEMS",
         patchnotes: "Änderungen im Monitoring zu diesem Build",
-        ui: "Benutzeroberfläche für EMS",
+        ui: "Benutzeroberfläche für OpenEMS",
     },
     Notifications: {
         authenticationFailed: 'Keine Verbindung: Authentifizierung fehlgeschlagen.',
